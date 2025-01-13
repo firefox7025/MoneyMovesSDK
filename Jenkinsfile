@@ -7,7 +7,7 @@ pipeline {
   stages {
     stage('Copy Artifacts') {
       steps {
-        container('rust') {
+        container('builder') {
           sh 'cp -r * /workspace/opt/app/shared/'
         }
       }
